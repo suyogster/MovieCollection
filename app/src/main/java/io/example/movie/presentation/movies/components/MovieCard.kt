@@ -31,20 +31,21 @@ fun MovieCard(
                 start = 8.dp,
                 end = 8.dp,
                 top = 4.dp,
-                bottom = 4.dp
+                bottom = 12.dp
             )
             .fillMaxWidth(),
-        elevation = 3.dp,
+        elevation = 6.dp,
         onClick = {
             navigateToUpdateMovieScreen(movie.id)
         }
     ) {
-        Column {
+        Column (horizontalAlignment = Alignment.CenterHorizontally
+        ) {
             AsyncImage(
                 model = ImageRequest.Builder(LocalContext.current)
                     .data(movie.image)
                     .crossfade(true)
-                    .size(Size.ORIGINAL)
+                    .size(500, 500)
                     .build(),
                 "Movie Thumbnail",
                 contentScale = ContentScale.Fit,

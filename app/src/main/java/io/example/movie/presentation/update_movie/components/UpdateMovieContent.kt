@@ -1,6 +1,8 @@
 package io.example.movie.presentation.update_movie.components
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Button
 import androidx.compose.material.DropdownMenuItem
 import androidx.compose.material.ExperimentalMaterialApi
@@ -47,6 +49,7 @@ fun UpdateMovieContent(
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .verticalScroll(rememberScrollState())
             .padding(padding),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
@@ -77,6 +80,7 @@ fun UpdateMovieContent(
             model = ImageRequest.Builder(LocalContext.current)
                 .data(movie.image)
                 .crossfade(true)
+                .size(800,800)
                 .build(),
             "Movie Thumbnail",
             contentScale = ContentScale.Fit,

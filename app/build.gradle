@@ -38,6 +38,11 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion compose_version
     }
+    kapt {
+        arguments {
+            arg("room.schemaLocation", "$projectDir/schemas".toString())
+        }
+    }
 }
 
 dependencies {
@@ -54,5 +59,6 @@ dependencies {
     //Hilt Navigation Compose
     implementation "androidx.hilt:hilt-navigation-compose:$hilt_navigation_compose_version"
     implementation "io.coil-kt:coil-compose:2.5.0"
+    //RatingBar Maven
     implementation 'com.github.a914-gowtham:compose-ratingbar:1.2.2'
 }

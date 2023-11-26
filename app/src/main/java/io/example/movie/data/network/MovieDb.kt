@@ -12,7 +12,7 @@ import javax.inject.Provider
 @Database(
     entities = [Movie::class],
     version = 1,
-    exportSchema = false
+    exportSchema = true
 )
 abstract class MovieDb : RoomDatabase() {
     abstract val movieDao: MovieDao
