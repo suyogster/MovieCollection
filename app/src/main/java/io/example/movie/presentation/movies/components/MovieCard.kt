@@ -36,7 +36,7 @@ fun MovieCard(
             .fillMaxWidth(),
         elevation = 6.dp,
         onClick = {
-            navigateToUpdateMovieScreen(movie.id)
+//            navigateToUpdateMovieScreen(movie.id)
         }
     ) {
         Column (horizontalAlignment = Alignment.CenterHorizontally
@@ -81,6 +81,9 @@ fun MovieCard(
                 Spacer(
                     modifier = Modifier.weight(1f)
                 )
+                UpdateIcon {
+                    navigateToUpdateMovieScreen(movie.id)
+                }
                 DeleteIcon(
                     deleteBook = deleteBook
                 )
