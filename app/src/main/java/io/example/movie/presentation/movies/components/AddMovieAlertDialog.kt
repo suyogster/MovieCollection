@@ -45,6 +45,7 @@ fun AddMovieAlertDialog(
         var rating by remember { mutableFloatStateOf(1f) }
         var title by remember { mutableStateOf(EMPTY_STRING) }
         var studio by remember { mutableStateOf(EMPTY_STRING) }
+        var description by remember { mutableStateOf(EMPTY_STRING) }
 
         val options = listOf(
             Poster("Poster 1", DEFAULT_IMG),
@@ -156,7 +157,7 @@ fun AddMovieAlertDialog(
                 TextButton(
                     onClick = {
                         closeDialog()
-                        val movie = Movie(0, title, studio, selectedImage.value, rating )
+                        val movie = Movie(0, title, studio, description, selectedImage.value, rating )
                         addBook(movie)
                     }
                 ) {

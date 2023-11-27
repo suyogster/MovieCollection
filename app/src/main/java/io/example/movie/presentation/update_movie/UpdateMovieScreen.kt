@@ -34,6 +34,9 @@ fun UpdateMovieScreen(
                 updateStudio = { author ->
                     viewModel.updateStudio(author)
                 },
+                updateDescription = { description ->
+                    viewModel.updateStudio(description)
+                },
                 updateImage = { url ->
                     viewModel.updateImage(url)
                 },

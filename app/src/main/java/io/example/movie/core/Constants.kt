@@ -23,7 +23,8 @@ class Constants {
 
         //Placeholders
         const val MOVIE_TITLE = "Type a movie title..."
-        const val STUDIO= "Type the studio name..."
+        const val STUDIO = "Type the studio name..."
+        const val DESCRIPTION = "Description about the movie..."
         const val EMPTY_STRING = ""
         const val DEFAULT_IMG = "https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
