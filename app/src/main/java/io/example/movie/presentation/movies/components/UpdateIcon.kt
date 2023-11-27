@@ -20,7 +20,7 @@ fun UpdateIcon(
         Icon(
             imageVector = Icons.Default.Create,
             contentDescription = UPDATE_MOVIE_SCREEN,
-            Modifier.size(40.dp, 40.dp)
+            Modifier.size(30.dp, 30.dp)
         )
     }
 }

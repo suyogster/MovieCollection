@@ -20,7 +20,7 @@ fun DeleteIcon(
         Icon(
             imageVector = Icons.Default.Delete,
             contentDescription = DELETE_MOVIE,
-            Modifier.size(40.dp, 40.dp)
+            Modifier.size(30.dp, 30.dp)
         )
     }
 }
