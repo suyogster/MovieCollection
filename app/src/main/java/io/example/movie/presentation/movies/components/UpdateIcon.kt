@@ -4,22 +4,22 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.Create
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import io.example.movie.core.Constants.Companion.DELETE_MOVIE
+import io.example.movie.core.Constants.Companion.UPDATE_MOVIE_SCREEN
 
 @Composable
-fun DeleteIcon(
-    deleteBook: () -> Unit
+fun UpdateIcon(
+    updateBook: () -> Unit
 ) {
     IconButton(
-        onClick = deleteBook
+        onClick = updateBook
     ) {
         Icon(
-            imageVector = Icons.Default.Delete,
-            contentDescription = DELETE_MOVIE,
+            imageVector = Icons.Default.Create,
+            contentDescription = UPDATE_MOVIE_SCREEN,
             Modifier.size(30.dp, 30.dp)
         )
     }
