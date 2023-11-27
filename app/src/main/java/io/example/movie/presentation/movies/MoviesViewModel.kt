@@ -17,7 +17,7 @@ import javax.inject.Inject
 class MoviesViewModel @Inject constructor(
     private val repo: MovieRepository
 ) : ViewModel() {
-    var movie by mutableStateOf(Movie(1, EMPTY_STRING, EMPTY_STRING, DEFAULT_IMG, 0f))
+    var movie by mutableStateOf(Movie(1, EMPTY_STRING, EMPTY_STRING, EMPTY_STRING, DEFAULT_IMG, 0f))
         private set
     var openDialog by mutableStateOf(false)
 
@@ -48,6 +48,12 @@ class MoviesViewModel @Inject constructor(
     fun updateStudio(studio: String) {
         movie = movie.copy(
             studio = studio
+        )
+    }
+
+    fun updateDescription(description: String) {
+        movie = movie.copy(
+            description = description
         )
     }
 

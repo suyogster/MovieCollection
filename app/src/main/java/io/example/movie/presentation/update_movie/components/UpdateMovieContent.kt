@@ -28,6 +28,7 @@ import com.gowtham.ratingbar.RatingBar
 import com.gowtham.ratingbar.RatingBarConfig
 import io.example.movie.core.Constants
 import io.example.movie.core.Constants.Companion.DEFAULT_IMG
+import io.example.movie.core.Constants.Companion.DESCRIPTION
 import io.example.movie.core.Constants.Companion.STUDIO
 import io.example.movie.core.Constants.Companion.MOVIE_TITLE
 import io.example.movie.core.Constants.Companion.UPDATE_BUTTON
@@ -41,6 +42,7 @@ fun UpdateMovieContent(
     movie: Movie,
     updateTitle: (title: String) -> Unit,
     updateStudio: (author: String) -> Unit,
+    updateDescription:(description: String) -> Unit,
     updateImage: (url: String) -> Unit,
     updateRating: (rating: Float) -> Unit,
     updateMovie: (movie: Movie) -> Unit,
@@ -110,6 +112,20 @@ fun UpdateMovieContent(
             placeholder = {
                 Text(
                     text = STUDIO
+                )
+            }
+        )
+        Spacer(
+            modifier = Modifier.height(8.dp)
+        )
+        TextField(
+            value = movie.description,
+            onValueChange = { description ->
+                updateDescription(description)
+            },
+            placeholder = {
+                Text(
+                    text = DESCRIPTION
                 )
             }
         )

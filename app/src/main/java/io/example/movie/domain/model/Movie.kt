@@ -11,6 +11,7 @@ data class Movie(
     val id: Int,
     val title: String,
     val studio: String,
+    val description: String,
     val image: String,
     val rating: Float
 )
